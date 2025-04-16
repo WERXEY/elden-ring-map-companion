@@ -1,0 +1,36 @@
+{
+  "name": "elden-ring-map-companion",
+  "version": "0.1.0",
+  "description": "Application interactive pour Elden Ring basée sur Map Genie",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "electron-builder"
+  },
+  "keywords": [
+    "elden-ring",
+    "map",
+    "game-companion",
+    "electron"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^28.2.0",
+    "electron-builder": "^24.9.1",
+    "leaflet": "^1.9.4",
+    "sqlite3": "^5.1.7",
+    "vue": "^3.4.15"
+  },
+  "build": {
+    "appId": "com.eldenringmapcompanion.app",
+    "productName": "Elden Ring Map Companion",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "portable"
+    }
+  }
+}
