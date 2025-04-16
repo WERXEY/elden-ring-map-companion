@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elden Ring Map Companion</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Elden Ring Map Companion</h1>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Rechercher un objet...">
+                <button id="search-button">Rechercher</button>
+            </div>
+        </header>
+        
+        <main>
+            <div id="map-container"></div>
+            
+            <div class="sidebar">
+                <div class="player-info">
+                    <h2>Informations du joueur</h2>
+                    <div id="player-position">Position: X: 0, Y: 0, Z: 0</div>
+                    <div id="player-area">Zone: Inconnue</div>
+                </div>
+                
+                <div class="item-details">
+                    <h2>Détails de l'objet</h2>
+                    <div id="selected-item">
+                        <p>Sélectionnez un objet sur la carte pour voir ses détails.</p>
+                    </div>
+                </div>
+                
+                <div class="progress-tracker">
+                    <h2>Progression</h2>
+                    <div class="progress-category">
+                        <span>Graines dorées:</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 30%"></div>
+                        </div>
+                        <span>30%</span>
+                    </div>
+                    <div class="progress-category">
+                        <span>Larmes sacrées:</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 45%"></div>
+                        </div>
+                        <span>45%</span>
+                    </div>
+                    <div class="progress-category">
+                        <span>Fragments de carte:</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 60%"></div>
+                        </div>
+                        <span>60%</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <div class="status-bar">
+                <div id="connection-status">Statut: Connecté au jeu</div>
+                <div id="version">Version: 0.1.0 (Prototype)</div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="renderer.js"></script>
+</body>
+</html>
