@@ -1,0 +1,196 @@
+/* Styles généraux */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* En-tête */
+header {
+    background-color: #1e1e1e;
+    padding: 10px 20px;
+    border-bottom: 1px solid #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    color: #d4af37; /* Couleur dorée rappelant Elden Ring */
+    font-size: 1.5rem;
+}
+
+.search-container {
+    display: flex;
+    gap: 10px;
+}
+
+#search-input {
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    color: #e0e0e0;
+    padding: 8px 12px;
+    border-radius: 4px;
+    width: 250px;
+}
+
+#search-button {
+    background-color: #d4af37;
+    color: #121212;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#search-button:hover {
+    background-color: #e5c158;
+}
+
+/* Contenu principal */
+main {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+#map-container {
+    flex: 1;
+    height: 100%;
+    background-color: #1a1a1a;
+}
+
+.sidebar {
+    width: 300px;
+    background-color: #1e1e1e;
+    border-left: 1px solid #333;
+    padding: 15px;
+    overflow-y: auto;
+}
+
+.player-info, .item-details, .progress-tracker {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #333;
+}
+
+h2 {
+    color: #d4af37;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.progress-category {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.progress-bar {
+    flex: 1;
+    height: 10px;
+    background-color: #2a2a2a;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: #d4af37;
+}
+
+/* Pied de page */
+footer {
+    background-color: #1e1e1e;
+    padding: 10px 20px;
+    border-top: 1px solid #333;
+}
+
+.status-bar {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: #888;
+}
+
+/* Styles spécifiques à Leaflet */
+.leaflet-container {
+    background-color: #1a1a1a !important;
+    height: 100%;
+}
+
+.leaflet-control-zoom a {
+    background-color: #2a2a2a !important;
+    color: #e0e0e0 !important;
+    border-color: #444 !important;
+}
+
+.leaflet-control-zoom a:hover {
+    background-color: #3a3a3a !important;
+}
+
+/* Marqueurs personnalisés */
+.player-marker {
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background-color: #ff4500;
+    border: 2px solid white;
+    box-shadow: 0 0 10px rgba(255, 69, 0, 0.7);
+}
+
+.item-marker {
+    width: 12px;
+    height: 12px;
+    background-color: #d4af37;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+.item-marker.collected {
+    background-color: #555;
+    opacity: 0.6;
+}
+
+/* Popup */
+.leaflet-popup-content-wrapper {
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+    border-radius: 4px;
+}
+
+.leaflet-popup-tip {
+    background-color: #2a2a2a;
+}
+
+.item-popup-title {
+    color: #d4af37;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.item-popup-description {
+    font-size: 0.9rem;
+}
+
+.item-popup-status {
+    margin-top: 5px;
+    font-style: italic;
+    color: #aaa;
+}
